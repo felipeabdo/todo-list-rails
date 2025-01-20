@@ -64,6 +64,13 @@ pt-BR:
     newtask: "Nova tarefa"
     backtasks: "Voltar para as tarefas"
     createtask: "Criar nova tarefa"
+  taskaction:
+    show: "Mostrar" 
+    edit: "Editar"
+    destroy: "Apagar"
+  taskcompleted:
+    completed: "Sim"
+    notcompleted: "Não"
 
       
 
