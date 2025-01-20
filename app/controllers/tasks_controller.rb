@@ -15,9 +15,10 @@ class TasksController < ApplicationController
   def create
     @task = Task.new(task_params)
     if @task.save
-      redirect_to @task, notice: 'Task was successfully created.'
+      redirect_to @task, notice: I18n.t('flash.tasks.create.notice')
     else
-      render :new
+      flash.now[:alert] = I18n.t('flash.tasks.create.alert', errors: @task.errors.full_messages.join(", "))
+      render :new, status: :unprocessable_entity
     end
   end
 
@@ -26,15 +27,16 @@ class TasksController < ApplicationController
 
   def update
     if @task.update(task_params)
-      redirect_to @task, notice: 'Task was successfully updated.'
+      redirect_to @task, notice: I18n.t('flash.tasks.update.notice')
     else
-      render :edit
+      flash.now[:alert] = I18n.t('flash.tasks.update.alert', errors: @task.errors.full_messages.join(", "))
+      render :edit, status: :unprocessable_entity
     end
   end
 
   def destroy
     @task.destroy
-    redirect_to tasks_url, notice: 'Task was successfully destroyed.'
+    redirect_to tasks_url, notice: I18n.t('flash.tasks.destroy.notice')
   end
 
   private

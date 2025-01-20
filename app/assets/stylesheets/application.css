@@ -8,3 +8,19 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+
+ .flash {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .flash.notice {
+    background-color: #dff0d8;
+    color: #3c763d;
+  }
+  
+  .flash.alert {
+    background-color: #f2dede;
+    color: #a94442;
+  }
+  

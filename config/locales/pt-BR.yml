@@ -27,28 +27,43 @@
 #       "yes": yup
 #       enabled: "ON"
 
-en:
-  hello: "Hello, world!"
+pt-BR:
+  hello: "Olá, mundo!"
   activerecord:
     models:
-      task: 'Task'
+      task: 'Tarefa'
     attributes:
       task:
-        title: 'Title'
-        description: 'Description'
+        title: 'Título'
+        description: 'Descrição'
   errors:
     messages:
-      blank: "can't be blank"
+      blank: "não pode ficar em branco"
   flash:
     tasks:
       create:
-        notice: 'Task was successfully created.'
-        alert: 'Error creating task: %{errors}'
+        notice: 'Tarefa criada com sucesso.'
+        alert: 'Erro ao criar tarefa: %{errors}'
       update:
-        notice: 'Task was successfully updated.'
-        alert: 'Error updating task: %{errors}'
+        notice: 'Tarefa atualizada com sucesso.'
+        alert: 'Erro ao atualizar tarefa: %{errors}'
       destroy:
-        notice: 'Task was successfully destroyed.'
-  confirm:
-    destroy: "Are you sure?"
+        notice: 'Tarefa excluída com sucesso.'
+  alert:
+    confirm:
+      destroy: "Você tem certeza?"
+  
+  titles:
+    tasks: 'Tarefas'
+    newtask: "Nova tarefa"
+  subtitles:
+    title: "Título"
+    description: 'Descrição'
+    completed: "Finalizada"
+  buttons:
+    newtask: "Nova tarefa"
+    backtasks: "Voltar para as tarefas"
+    createtask: "Criar nova tarefa"
+
+      
 

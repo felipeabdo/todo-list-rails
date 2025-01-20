@@ -1,5 +1,5 @@
-<h1>New Task</h1>
+<h1> <%= t('titles.newtask') %> </h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Back to Tasks', tasks_path %>
+<%= link_to t('buttons.backtasks'), tasks_path %>
